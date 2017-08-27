@@ -1,6 +1,6 @@
 {
   "name": "@delucis/reading-data-text-stats",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Text statistics plugin for @delucis/reading-data.",
   "main": "index.js",
   "scripts": {
