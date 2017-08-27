@@ -13,6 +13,7 @@ const ReadingDataTextStats = (function () {
      * used by ReadingData#use()
      * @type {Object}
      * @prop {String} scope='textStats' - The scope this plugin’s data should be saved under on the ReadingData instance.
+     * @prop {String} hooks='process'   - The hook on which this plugin should be called.
      * @prop {String} textNode='text'   - The property in the scope that contains the string to be analysed.
      * @prop {String} outNode='stats'   - The property to be added to the scope text statistics.
      * @prop {Boolean} stripHTML=false  - Whether or not the plugin should try to strip HTML tags from the input string.
@@ -21,6 +22,7 @@ const ReadingDataTextStats = (function () {
      */
     config: {
       scope: 'textStats',
+      hooks: 'process',
       textNode: 'text',
       outNode: 'stats',
       stripHTML: false,
