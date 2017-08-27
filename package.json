@@ -1,0 +1,40 @@
+{
+  "name": "@delucis/reading-data-text-stats",
+  "version": "0.0.1",
+  "description": "Text statistics plugin for @delucis/reading-data.",
+  "main": "index.js",
+  "scripts": {
+    "build:docs": "jsdoc --configure .jsdoc.json --verbose",
+    "clean:docs": "rimraf docs/",
+    "test": "nyc mocha --reporter spec",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "preversion": "npm run test",
+    "version": "npm run clean:docs && npm run build:docs && git add -A docs",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delucis/reading-data-text-stats.git"
+  },
+  "author": "Chris Swithinbank <swithinbank@gmail.com> (http://chrisswithinbank.net/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/delucis/reading-data-text-stats/issues"
+  },
+  "homepage": "https://github.com/delucis/reading-data-text-stats#readme",
+  "devDependencies": {
+    "@delucis/reading-data": "^0.7.1",
+    "chai": "^4.1.1",
+    "coveralls": "^2.13.1",
+    "jsdoc": "^3.5.4",
+    "minami": "^1.2.3",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "@iarna/word-count": "^1.0.3",
+    "franc-min": "^3.1.1",
+    "strip": "^3.0.0"
+  }
+}
